@@ -13,6 +13,8 @@ function lowerCaseName(string) {
 
 // Fetch data
 function getAlbums(event) {
+  let albumContent = document.querySelector('.albumContent');
+  albumContent.innerHTML = '<div></div>';
   const name = document.querySelector('#artistName').value;
   const artistName = lowerCaseName(name);
 
@@ -21,7 +23,7 @@ function getAlbums(event) {
   )
     .then((response) => response.json())
     .then((data) => {
-      let albumContent = document.querySelector('.albumContent');
+      albumContent = document.querySelector('.albumContent');
       data.results.forEach((album) => {
         let albumChildDiv = document.createElement('div');
         albumChildDiv.innerHTML = `<div class="single-album">
