@@ -35,6 +35,6 @@ function getAlbums(event) {
       });
     })
     .catch((err) => {
-      console.log('Pokemon not found', err);
+      console.log('Artist not found', err);
     });
 }
